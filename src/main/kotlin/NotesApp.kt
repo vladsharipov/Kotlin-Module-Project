@@ -18,7 +18,6 @@ class NotesApp {
             }
         }
     }
-
     private fun selectArchive() {
         println("Список архивов:")
         println("0. Создать архив")
@@ -30,7 +29,7 @@ class NotesApp {
         val choice = readLine()?.toIntOrNull()
         when {
             choice == 0 -> createArchive()
-            choice in 1..archives.size -> {
+            choice != null && choice in 1..archives.size -> {
                 val archive = archives[choice - 1]
                 viewArchive(archive)
             }
