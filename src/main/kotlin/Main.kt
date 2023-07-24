@@ -1,19 +1,7 @@
 fun main(args: Array<String>) {
-    // Класс для представления заметки
-    data class Note(val title: String, val content: String)
 
-    // Класс для представления архива заметок
-    class Archive(val name: String) {
-        private val notes = mutableListOf<Note>()
 
-        fun addNote(note: Note) {
-            notes.add(note)
-        }
 
-        fun getNotes(): List<Note> {
-            return notes.toList()
-        }
-    }
 
     // Класс для управления приложением "Заметки"
     class NotesApp {
